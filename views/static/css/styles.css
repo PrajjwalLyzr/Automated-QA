@@ -1,0 +1,28 @@
+.parsed-content {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+}
+
+.parsed-content h1, 
+.parsed-content h2, 
+.parsed-content h3 {
+    color: #343a40;
+}
+
+.parsed-content ul {
+    padding-left: 20px;
+}
+
+.parsed-content li {
+    margin-bottom: 10px;
+}
+
+.parsed-content code {
+    background-color: #e9ecef;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+ 

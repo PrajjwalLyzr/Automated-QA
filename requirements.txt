@@ -1,0 +1,8 @@
+Flask
+openai
+selenium
+pytest
+pytest-html
+jinja2
+requests
+

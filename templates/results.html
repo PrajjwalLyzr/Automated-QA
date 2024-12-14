@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Parsed User Stories</h2>
+<div class="parsed-content">
+    {{ parsed_html | safe }}
+</div>
+<a href="/" class="btn btn-secondary mt-3">Back to Home</a>
+{% endblock %}
