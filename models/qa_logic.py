@@ -35,31 +35,3 @@ def generate_test_cases(user_stories):
                     )
     
     return response.choices[0].message.content
-    
-
-def execute_ui_test_cases(url):
-    """Run UI tests using Selenium."""
-    options = webdriver.ChromeOptions()
-    options.add_argument("--headless")
-    driver = webdriver.Chrome(options=options)
-
-    try:
-        driver.get(url)
-        # Example test case
-        assert "Example" in driver.title
-        return "All UI tests passed"
-    except AssertionError:
-        return "UI Test Failed"
-    finally:
-        driver.quit()
-
-
-def run_tests_and_generate_report():
-    """Run all pytest test cases and generate an HTML report."""
-    pytest_command = "pytest --html=reports/test_report.html --self-contained-html"
-    process = subprocess.run(pytest_command, shell=True, capture_output=True, text=True)
-
-    if process.returncode == 0:
-        return "Tests executed successfully. Report generated."
-    else:
-        return f"Test execution failed:\n{process.stderr}"
